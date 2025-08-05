@@ -19,16 +19,22 @@ header, footer {
 /* main container */
 .container {
   overflow-x: auto;
-  max-width: 80%;
+  max-width: 100%;
+  padding: 0 1rem;
+
 
 }
 
 .periodic-table {
   display: grid;
+  margin: 2rem auto;
   grid-template-columns: repeat(18, 1fr);
   gap: 6px;
   justify-content: center;
   margin-bottom: 2rem;
+  max-width: 200%;
+  padding: 1rem;
+  
 }
 
 .element, .unknown {
@@ -61,7 +67,7 @@ header, footer {
 
 .element span, .unknown span {
   display: block;
-  font-size: 0.80rem;
+  font-size: 0.55rem;
   opacity: 0.9;
   font-weight: 600;
 }
