@@ -1,0 +1,181 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fdfdfd, #eaf1fb);
+  margin: 0;
+  padding: 0;
+}
+
+/* custom font style */
+h1, h2, h3, h5, p{
+  font-family: 'Poppins', sans-serif;
+}
+
+header, footer {
+  background-color: #003d7b;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+/* main container */
+.container {
+  overflow-x: auto;
+  max-width: 80%;
+
+}
+
+.periodic-table {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.element, .unknown {
+  background-color: #828181;
+  color: #fff;
+  text-align: center;
+  padding: 8px 4px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  min-width: 40px;
+}
+
+.unknown:hover {
+  background-color: #5a5959;
+  transform: scale(1.06);
+}
+.element h3, .unknown h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.element strong, .unknown strong {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.element span, .unknown span {
+  display: block;
+  font-size: 0.80rem;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.element:hover{
+  transform: scale(1.06);
+}
+
+.lanth-actin {
+  margin-top: -1rem;
+  grid-template-columns: repeat(14, 1fr);
+}
+
+.heading {
+  color: #003d7b;
+}
+
+/* elements color group */
+.alkali-metal { background-color: #ff1900; }
+.alkaline-earth { background-color: #ff7801; }
+.transition-metal { background-color: #ffcc00; color: #000; }
+.basic-metal { background-color: #00ac72; }
+.metalloid { background-color: #d501b2; }
+.nonmetal { background-color: #0985d7; }
+.halogen { background-color: #9f00e4e3; }
+.noble-gas { background-color: #9618a9; }
+.lanthanide { background-color: #00d458; }
+.actinide { background-color: #295ed9; }
+
+/* elements color group hover colour */
+.alkali-metal:hover { background-color: #b21200; }
+.alkaline-earth:hover { background-color: #b04600; }
+.transition-metal:hover { background-color: #c29d08; }
+.basic-metal:hover { background-color: #017642; }
+.metalloid:hover { background-color: #aa069f; }
+.nonmetal:hover { background-color: #00589c; }
+.halogen:hover { background-color: #7302a8; }
+.noble-gas:hover { background-color: #660291; }
+.lanthanide:hover { background-color: #27ae60; }
+.actinide:hover { background-color: #2b4d9e; }
+
+/* legend Section */
+ 
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.legend-item {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f4f4f4;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+/* medium to large screens */
+@media (min-width: 481px) and (max-width: 768px) {
+  .periodic-table {
+    grid-template-columns: repeat(9, 1fr);
+    gap: 6px;
+  }
+
+  .element {
+    font-size: 0.75rem;
+    padding: 8px 4px;
+    min-width: auto;
+  }
+
+  .element h3 {
+    font-size: 1rem;
+  }
+    
+}
+
+/* small screens */
+@media (max-width: 480px) {
+  .periodic-table {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+  }
+
+  .element {
+    font-size: 0.6rem;
+    padding: 6px 2px;
+    min-width: auto;
+  }
+
+  .element h3 {
+    font-size: 0.85rem;
+  }
+
+  .legend-item {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
+
+  .legend-color {
+    width: 16px;
+    height: 16px;
+  }
+    
+}
+
